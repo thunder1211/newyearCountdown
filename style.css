@@ -1,0 +1,45 @@
+html,body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+.aniBG_wrap{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.aniBG_canvas {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+}
+.countDown_wrap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+  color: #fff;
+}
+.countDown_wrap .title{
+  margin-bottom: 2em;
+}
+.countDown_wrap .timeArea{
+  display: flex;
+  align-items: center;
+}
+.countDown_wrap .timeArea .item{
+  margin: 0 1em;
+}

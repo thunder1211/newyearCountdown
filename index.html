@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="_VUE_APP_">
+    <div class="aniBG_wrap">
+      <canvas class="aniBG_canvas" :width="width" :height="height"></canvas>
+    </div>
+    <div class="countDown_wrap">
+      <div class="title">2021新年 倒计时</div>
+      <div class="timeArea">
+        <div class="item">1天</div>
+        <div class="item">24小时</div>
+        <div class="item">36分</div>
+        <div class="item">24秒</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"></script>
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/index.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/locale/en.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/locale/zh-CN.min.js"></script> -->
+  <script src="./animateBG.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#_VUE_APP_',
+      data() {
+        return {
+          width: 4,
+          height: 4,
+        }
+      },
+      created() {
+        this.init()
+      },
+      mounted() {
+        animateBG({
+          selector: '.aniBG_canvas',
+          width: this.width,
+          height: this.height,
+        })
+      },
+      methods: {
+        init() {
+          // this.width = window.innerWidth / 200
+          // this.height = window.innerHeight / 200
+        },
+      }
+    })
+  </script>
+</body>
+</html>
